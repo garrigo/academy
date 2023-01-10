@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+dCILCp+FNhafNPcxvMxeZCdZ+WkH7fiDjHnJzbrtyc=",
+  "Source": "PrinterServer",
+  "BasePath": "_content/PrinterServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
