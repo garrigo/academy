@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2duXJrNeHPEXQK1GLv5O5FPUGO/LdYdI/pxGKbHZrBAUMHQov5JqvZy49Xbc/FIXOVfXbXGoWBCjkEvXowSM3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\boh_h\\Desktop\\lab10\\FrontEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\boh_h\\.nuget\\packages\\mongodb.bson\\2.18.0\\mongodb.bson.2.18.0.nupkg.sha512",
+    "C:\\Users\\boh_h\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

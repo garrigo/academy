@@ -1,0 +1,33 @@
+﻿@model Log
+@{
+    ViewData["Title"] = "Log Details";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table width="100%" ">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Data</td>
+            <td>RX</td>
+            <td>TX</td>
+            <td>Status</td>
+            <td>Progressivo Sessione</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null){
+        <tr>
+            <td>@Model.id</td>
+            <td>@Model.Data</td>
+            <td>@Model.NominativoRX</td>
+            <td>@Model.NominativoTX</td>
+            <td>@Model.Status</td>
+            <td>@Model.ProgressivoSessione</td>
+        </tr>
+        }
+    </tbody>
+</table>

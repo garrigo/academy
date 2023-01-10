@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tWu7OuwfcboEmyM8AryED3wDhaAzLnqhRNCiGmzsHL0=",
+  "Source": "DatabaseServer",
+  "BasePath": "_content/DatabaseServer",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

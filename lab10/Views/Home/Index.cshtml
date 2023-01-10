@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Log>
+@{
+    ViewData["Title"] = "Log Entries";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 10px;
+    }
+
+    tbody > tr:nth-child(even) {
+        background-color: white;
+    }
+
+    tbody > tr:nth-child(odd) {
+        background-color: navajowhite;
+    }
+
+    thead > tr {
+        font-weight: bold;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Log Entries</h1>
+</div>
+<table id="logs width="100%"">
+    <thead >
+        <tr>
+            <td>ID</td>
+            <td>Data</td>
+            <td>RX</td>
+            <td>TX</td>
+            <td>Status</td>
+            <td>Progressivo Sessione</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null){
+            @foreach(var item in Model){
+                <tr>
+                    <td>@Html.ActionLink(@item.id, "Details", new { Id = item.id})</td>
+                    <td>@item.Data</td>
+                    <td>@Html.ActionLink(@item.NominativoRX, "FromRx", new { Rx = item.NominativoRX})</td>
+                    <td>@item.NominativoTX</td>
+                    <td>@item.Status</td>
+                    <td>@item.ProgressivoSessione</td>
+            <td><a class="btn btn-warning" href="@Url.Action("Edit", new { Id = item.id, Flag = 0})">Modify</a></td>
+            <td><a class="btn btn-danger" href="@Url.Action("Delete", new { Id = item.id})">Delete</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+<a class="btn btn-success" href="@Url.Action("Edit", new { Id = "", Flag = 1})">Add new</a>
+@*<button>@Html.ActionLink("Add many", "AddMany")</button>*@
+<div class="text-center">
+    @if (Model != null && Model.Count() > 0){
+        @if ((int)TempData["Page"] > 1){
+            <a class="btn btn-primary" href="@Url.Action("Index", new {Page = (int)TempData["Page"]-1})"> &lt; Page @((int)TempData["Page"]-1)</a>
+        }
+        @if ((int)TempData["PageNumber"] + 1 > (int)TempData["Page"]){
+            <a class="btn btn-primary" href="@Url.Action("Index", new {Page = (int)TempData["Page"]+1})">Page @((int)TempData["Page"] + 1) &gt;</a>
+        }
+    }
+</div>
